@@ -1,12 +1,38 @@
-<h1> Blog Bundle </h1>
+{% extends 'BlogBundle:Layout:main_layout.html.twig' %}
 
-{{ 'Asus'|upper }}
-<br /><br />
-{{ "ALL USER" }}
-<hr>
-{% for user in users if user.best %}
-    <p> {{ user.name }} </p>
-{% else %}
-    <p> {{ 'No Users Found!!!' }} </p>
-{% endfor %}
+{# Title Start #}
+{% block title %}BlogHomeTitle{% endblock %}
 
+{# Stylesheet Start #}
+{% block stylesheets %}
+    <style>
+        *{
+            color: red;
+        }
+        ul li a{
+            color: blue;
+        }
+    </style>
+{% endblock %}
+
+{# Header Start #}
+{% block header %}
+    {{ parent() }}
+
+{% endblock %}
+
+{# Body Start #}
+{% block body %}
+    <h1>Articles Lists </h1>
+
+    {% for article in articles %}
+        {{ include('BlogBundle:Layout:article_details.html.twig', {'article': article}) }}
+    {% endfor %}
+{% endblock %}
+
+{# Javascript Start #}
+{% block javascripts %}
+    <script>
+        // alert('Welcome to Symfony Framework');
+    </script>
+{% endblock %}

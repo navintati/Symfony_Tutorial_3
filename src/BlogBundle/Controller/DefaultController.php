@@ -23,6 +23,24 @@ class DefaultController extends Controller
             ]
         ];
 
-        return $this->render('BlogBundle:Default:index.html.twig', ['users' => $users]);
+        $articles = [
+            [
+                'title' => 'Title 1',
+                'author' => 'Messi',
+                'date' => '2019-06-10',
+            ],
+            [
+                'title' => 'Title 2',
+                'author' => 'Neymar',
+                'date' => '2019-06-11',
+            ],
+            [
+                'title' => 'Title 3',
+                'author' => 'Ronaldo',
+                'date' => '2019-06-07'
+            ]
+        ];
+
+        return $this->render('BlogBundle:Default:index.html.twig', ['users' => $users, 'articles' => $articles]);
     }
 }
