@@ -53,7 +53,7 @@ class TutorialController extends Controller
     {
         $this->get('session')->set("shopping_cart", [
             [
-                'item' => 'playstation 4',
+                'item' => 'Playstation 4',
                 'quantity' => 1,
                 'price' => '300'
             ],
@@ -66,6 +66,11 @@ class TutorialController extends Controller
                 'item' => 'Xbox Ten',
                 'quantity' => 10,
                 'price' => '900'
+            ],
+            [
+                'item' => 'Playstation 10',
+                'quantity' => 10,
+                'price' => '1100'
             ]
         ]);
 
