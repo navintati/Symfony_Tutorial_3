@@ -1,0 +1,12 @@
+<h1> Blog Bundle </h1>
+
+{{ 'Asus'|upper }}
+<br /><br />
+{{ "ALL USER" }}
+<hr>
+{% for user in users if user.best %}
+    <p> {{ user.name }} </p>
+{% else %}
+    <p> {{ 'No Users Found!!!' }} </p>
+{% endfor %}
+
