@@ -1,0 +1,1 @@
+console.log("Hello Symfony I'm your friend Symfony");

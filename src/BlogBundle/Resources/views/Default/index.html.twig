@@ -5,14 +5,7 @@
 
 {# Stylesheet Start #}
 {% block stylesheets %}
-    <style>
-        *{
-            color: red;
-        }
-        ul li a{
-            color: blue;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ absolute_url(asset('css/style.css')) }}">
 {% endblock %}
 
 {# Header Start #}
@@ -24,7 +17,7 @@
 {# Body Start #}
 {% block body %}
     <h1>Articles Lists </h1>
-
+    <img src="{{ asset('images/asset.jpg') }}" alt="Asset">
     {% for article in articles %}
         {{ include('BlogBundle:Layout:article_details.html.twig', {'article': article}) }}
     {% endfor %}
@@ -32,7 +25,5 @@
 
 {# Javascript Start #}
 {% block javascripts %}
-    <script>
-        // alert('Welcome to Symfony Framework');
-    </script>
+    <script type="text/javascript" src="{{ asset('js/plugin.js') }}"></script>
 {% endblock %}
